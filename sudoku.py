@@ -108,6 +108,8 @@ def drawBoard(board, siz):
             print('\t', board[i][j], end='')
         print('\n')
 
+#https://www.kaggle.com/bryanpark/sudoku/data ---- if you want to try the solution in different soduku games
+# go to the website mentioned above download the file and use this function
 def read_sudoku_file():
     quizzes = np.zeros((1000000, 81), np.int32)
     solutions = np.zeros((1000000, 81), np.int32)
@@ -126,17 +128,17 @@ def read_sudoku_file():
 
 
 if __name__ == "__main__":
-    #sudoku_board = [
-    #    [0, 0, 0, 8, 0, 5, 0, 1, 3],
-    #   [0, 0, 0, 2, 0, 3, 6, 0, 0],
-    #   [6, 0, 0, 0, 9, 0, 2, 0, 4],
-    #   [0, 0, 0, 0, 0, 0, 0, 0, 5],
-    #   [0, 4, 0, 1, 0, 0, 7, 0, 6],
-    #   [2, 5, 6, 3, 0, 4, 8, 9, 0],
-    #   [5, 9, 0, 0, 0, 7, 1, 0, 2],
-    #   [1, 0, 2, 0, 8, 0, 4, 7, 0],
-    #   [0, 0, 4, 9, 1, 0, 0, 3, 8]
-    #]
-    #siz = len(sudoku_board[0])
-    #solve_sudoku(sudoku_board, siz)
-    read_sudoku_file()
+    sudoku_board = [
+       [0, 0, 0, 8, 0, 5, 0, 1, 3],
+       [0, 0, 0, 2, 0, 3, 6, 0, 0],
+       [6, 0, 0, 0, 9, 0, 2, 0, 4],
+       [0, 0, 0, 0, 0, 0, 0, 0, 5],
+       [0, 4, 0, 1, 0, 0, 7, 0, 6],
+       [2, 5, 6, 3, 0, 4, 8, 9, 0],
+       [5, 9, 0, 0, 0, 7, 1, 0, 2],
+       [1, 0, 2, 0, 8, 0, 4, 7, 0],
+       [0, 0, 4, 9, 1, 0, 0, 3, 8]
+    ]
+    siz = len(sudoku_board[0])
+    solve_sudoku(sudoku_board, siz)
+    #read_sudoku_file()
